@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="X-UA-Compatible" content="chrome=1" /> -->
+    <meta name="description" content="midi-input-interface"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="gh-pages/styles/stylesheet.css">
+    <title>Keyboard Page</title>
+    <style>
+        #log {
+            height: 15em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+
+            <button id ='runtest' onclick="runTest();" style="font-size: 18px; margin-right: 10px;">Test MIDI!</button>
+            <button id='end' onclick="endhere();" style="font-size: 18px; margin-right: 10px;">End!</button>
+            <pre id="log" style="height:10px; visibility:hidden;"></pre>
+            <div id="MIDIPlugin" style="position:absolute; visibility:hidden"></div>
+        </section>
+    </div>
+
+
+
+    <div class="keyboard-container">
+      <div class="naturals-container">
+        <button id="a0"><p>A</p></button>
+        <button id="b0"><p>B</p></button>
+        <button id="c1"><p>C</p></button>
+        <button id="d1"><p>D</p></button>
+        <button id="e1"><p>E</p></button>
+        <button id="f1"><p>F</p></button>
+        <button id="g1"><p>G</p></button>
+        <button id="a1"><p>A</p></button>
+        <button id="b1"><p>B</p></button>
+        <button id="c2"><p>C</p></button>
+        <button id="d2"><p>D</p></button>
+        <button id="e2"><p>E</p></button>
+        <button id="f2"><p>F</p></button>
+        <button id="g2"><p>G</p></button>
+        <button id="a2"><p>A</p></button>
+        <button id="b2"><p>B</p></button>
+        <button id="c3"><p>C</p></button>
+        <button id="d3"><p>D</p></button>
+        <button id="e3"><p>E</p></button>
+        <button id="f3"><p>F</p></button>
+        <button id="g3"><p>G</p></button>
+        <button id="a3"><p>A</p></button>
+        <button id="b3"><p>B</p></button>
+        <button id="c4"><p>C</p></button>
+        <button id="d4"><p>D</p></button>
+        <button id="e4"><p>E</p></button>
+        <button id="f4"><p>F</p></button>
+        <button id="g4"><p>G</p></button>
+        <button id="a4"><p>A</p></button>
+        <button id="b4"><p>B</p></button>
+        <button id="c5"><p>C</p></button>
+        <button id="d5"><p>D</p></button>
+        <button id="e5"><p>E</p></button>
+        <button id="f5"><p>F</p></button>
+        <button id="g5"><p>G</p></button>
+        <button id="a5"><p>A</p></button>
+        <button id="b5"><p>B</p></button>
+        <button id="c6"><p>C</p></button>
+        <button id="d6"><p>D</p></button>
+        <button id="e6"><p>E</p></button>
+        <button id="f6"><p>F</p></button>
+        <button id="g6"><p>G</p></button>
+        <button id="a6"><p>A</p></button>
+        <button id="b6"><p>B</p></button>
+        <button id="c7"><p>C</p></button>
+        <button id="d7"><p>D</p></button>
+        <button id="e7"><p>E</p></button>
+        <button id="f7"><p>F</p></button>
+        <button id="g7"><p>G</p></button>
+        <button id="a7"><p>A</p></button>
+        <button id="b7"><p>B</p></button>
+        <button id="c8"><p>C</p></button>
+        
+      </div>
+
+      <div class="accidentals-container">
+        <button style="margin-left: 22px;" id="as0"><p>A#</p></button>
+        <button style="margin-left: 42px;" id="cs1"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds1"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs1"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs1"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as1"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs2"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds2"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs2"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs2"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as2"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs3"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds3"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs3"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs3"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as3"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs4"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds4"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs4"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs4"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as4"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs5"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds5"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs5"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs5"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as5"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs6"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds6"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs6"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs6"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as6"><p>A#</p></button>
+        <button style="margin-left: 43px;" id="cs7"><p>C#</p></button>
+        <button style="margin-left: 10px;" id="ds7"><p>D#</p></button>
+        <button style="margin-left: 42px;" id="fs7"><p>F#</p></button>
+        <button style="margin-left: 9px;" id="gs7"><p>G#</p></button>
+        <button style="margin-left: 9px;" id="as7"><p>A#</p></button>
+      </div>
+
+    </div>
+  
+    
+    <!-- SCRIPTS  -->
+
+    <script src="browser/WebMIDIAPI.min.js"></script>
+
+
+    <script>
+        var midi = null;
+        var inputs = null;
+        var outputs = null;
+        var input = null;
+        var output = null;
+        var log = null;
+        var notes = [];
+
+        document.getElementById("log").style.color = "grey"
+
+        function runTest() {
+            if (!log)
+                log = document.getElementById("log");
+            log.innerHTML = "";
+            end = document.getElementById('end')
+            end.style.borderColor = 'initial'
+            notes = []
+            navigator.requestMIDIAccess().then(success, failure);
+        }
+
+        function handleMIDIMessage(ev) {
+
+            const a0 = document.getElementById('a0'), a1 = document.getElementById('a1'), a2 = document.getElementById('a2'), a3 = document.getElementById('a3'), a4 = document.getElementById('a4'), a5 = document.getElementById('a5'), a6 = document.getElementById('a6'), a7 = document.getElementById('a7');
+            const as0 = document.getElementById('as0'), as1 = document.getElementById('as1'), as2 = document.getElementById('as2'), as3 = document.getElementById('as3'), as4 = document.getElementById('as4'), as5 = document.getElementById('as5'), as6 = document.getElementById('as6'), as7 = document.getElementById('as7');
+            const b0 = document.getElementById('b0'), b1 = document.getElementById('b1'), b2 = document.getElementById('b2'), b3 = document.getElementById('b3'), b4 = document.getElementById('b4'), b5 = document.getElementById('b5'), b6 = document.getElementById('b6'), b7 = document.getElementById('b7');
+            const c1 = document.getElementById('c1'), c2 = document.getElementById('c2'), c3 = document.getElementById('c3'), c4 = document.getElementById('c4'), c5 = document.getElementById('c5'), c6 = document.getElementById('c6'), c7 = document.getElementById('c7'), c8 = document.getElementById('c8');
+            const cs1 = document.getElementById('cs1'), cs2 = document.getElementById('cs2'), cs3 = document.getElementById('cs3'), cs4 = document.getElementById('cs4'), cs5 = document.getElementById('cs5'), cs6 = document.getElementById('cs6'), cs7 = document.getElementById('cs7'), cs8 = document.getElementById('cs8');
+            const d1 = document.getElementById('d1'), d2 = document.getElementById('d2'), d3 = document.getElementById('d3'), d4 = document.getElementById('d4'), d5 = document.getElementById('d5'), d6 = document.getElementById('d6'), d7 = document.getElementById('d7');
+            const ds1 = document.getElementById('ds1'), ds2 = document.getElementById('ds2'), ds3 = document.getElementById('ds3'), ds4 = document.getElementById('ds4'), ds5 = document.getElementById('ds5'), ds6 = document.getElementById('ds6'), ds7 = document.getElementById('ds7');
+            const e1 = document.getElementById('e1'), e2 = document.getElementById('e2'), e3 = document.getElementById('e3'), e4 = document.getElementById('e4'), e5 = document.getElementById('e5'), e6 = document.getElementById('e6'), e7 = document.getElementById('e7');
+            const f1 = document.getElementById('f1'), f2 = document.getElementById('f2'), f3 = document.getElementById('f3'), f4 = document.getElementById('f4'), f5 = document.getElementById('f5'), f6 = document.getElementById('f6'), f7 = document.getElementById('f7');
+            const fs1 = document.getElementById('fs1'), fs2 = document.getElementById('fs2'), fs3 = document.getElementById('fs3'), fs4 = document.getElementById('fs4'), fs5 = document.getElementById('fs5'), fs6 = document.getElementById('fs6'), fs7 = document.getElementById('fs7');
+            const g1 = document.getElementById('g1'), g2 = document.getElementById('g2'), g3 = document.getElementById('g3'), g4 = document.getElementById('g4'), g5 = document.getElementById('g5'), g6 = document.getElementById('g6'), g7 = document.getElementById('g7');
+            const gs1 = document.getElementById('gs1'), gs2 = document.getElementById('gs2'), gs3 = document.getElementById('gs3'), gs4 = document.getElementById('gs4'), gs5 = document.getElementById('gs5'), gs6 = document.getElementById('gs6'), gs7 = document.getElementById('gs7');
+
+
+
+            var oriOnOff = ev.data[0]?.toString(16);
+            var newOnOff = oriOnOff
+                .replace("90", "note_on")
+                .replace("80", "note_off");
+            var oldNote = "0x" + ev.data[1]?.toString(16);
+            var newNote = parseInt(oldNote, 16);
+            let velocity = parseInt(ev.data[2]?.toString(16))
+            let time = parseInt(ev.timeStamp), validNotes = ['note_on', 'note_off']
+
+            if (ev.data.length > 1 && validNotes.includes(newOnOff)){
+
+                console.log(ev.data)
+                // log.innerHTML += [newOnOff, newNote, velocity, time, '\n'].join(',');
+                newNoteObj = {noteOnOff:newOnOff, note:newNote, velocity:velocity, time:time}
+                notes.push(newNoteObj)
+
+            }
+
+            let data0 = ev.data[0].toString(16)
+            let data1 = ev.data[1].toString(16)
+
+            function color_white(button, num, a) {
+                if((data0=='80') && (data1==num)) {
+                    button.style.background = 'white';
+                    clearRectangle(a);
+                }
+                if((data0=='90') && (data1==num)) {
+                    button.style.background = 'salmon';
+                    makeRectangle(a);
+                }
+            }
+
+            function color_black(button, num, a) {
+                if((data0=='80') && (data1==num)) {
+                    button.style.background = 'black';
+                    clearRectangle(a);
+                }
+                if((data0=='90') && (data1==num)) {
+                    button.style.background = 'salmon';
+                    makeRectangle(a);
+                }
+            }
+
+            color_white(a0, 15, 0);    color_black(as0, 16, 0.5);    color_white(b0, 17, 1); 
+            color_white(c1, 18, 2);    color_black(cs1, 19, 2.5);    color_white(d1, '1a', 3);  color_black(ds1, '1b', 3.5);  color_white(e1, '1c', 4);  color_white(f1, '1d', 5);  color_black(fs1, '1e', 5.5);  color_white(g1, '1f', 6);  color_black(gs1, 20, 6.5);    color_white(a1, 21, 7);    color_black(as1, 22, 7.5);    color_white(b1, 23, 8);
+            color_white(c2, 24, 9);    color_black(cs2, 25, 9.5);    color_white(d2, 26, 10);   color_black(ds2, 27, 10.5);   color_white(e2, 28, 11);   color_white(f2, 29, 12);   color_black(fs2, '2a', 12.5); color_white(g2, '2b', 13); color_black(gs2, '2c', 13.5); color_white(a2, '2d', 14); color_black(as2, '2e', 14.5); color_white(b2, '2f', 15);
+            color_white(c3, 30, 16);   color_black(cs3, 31, 16.5);   color_white(d3, 32, 17);   color_black(ds3, 33, 17.5);   color_white(e3, 34, 18);   color_white(f3, 35, 19);   color_black(fs3, 36, 19.5);   color_white(g3, 37, 20);   color_black(gs3, 38, 20.5);   color_white(a3, 39, 21);   color_black(as3, '3a', 21.5); color_white(b3, '3b', 22); 
+            color_white(c4, '3c', 23); color_black(cs4, '3d', 23.5); color_white(d4, '3e', 24); color_black(ds4, '3f', 24.5); color_white(e4, 40, 25);   color_white(f4, 41, 26);   color_black(fs4, 42, 26.5);   color_white(g4, 43, 27);   color_black(gs4, 44, 27.5);   color_white(a4, 45, 28);   color_black(as4, 46, 28.5);   color_white(b4, 47, 29); 
+            color_white(c5, 48, 30);   color_black(cs5, 49, 30.5);   color_white(d5, '4a', 31); color_black(ds5, '4b', 31.5); color_white(e5, '4c', 32); color_white(f5, '4d', 33); color_black(fs5, '4e', 33.5); color_white(g5, '4f', 34); color_black(gs5, 50, 34.5);   color_white(a5, 51, 35);   color_black(as5, 52, 35.5);   color_white(b5, 53, 36);
+            color_white(c6, 54, 37);   color_black(cs6, 55, 37.5);   color_white(d6, 56, 38);   color_black(ds6, 57, 38.5);   color_white(e6, 58, 39);   color_white(f6, 59, 40);   color_black(fs6, '5a', 40.1); color_white(g6, '5b', 41); color_black(gs6, '5c', 41.5); color_white(a6, '5d', 42); color_black(as6, '5e', 42.5); color_white(b6, '5f', 43);
+            color_white(c7, 60, 44);   color_black(cs7, 61, 44.5);   color_white(d7, 62, 45);   color_black(ds7, 63, 45.5);   color_white(e7, 64, 46);   color_white(f7, 64, 47);   color_black(fs7, 66, 47.5);   color_white(g7, 67, 48);   color_black(gs7, 68, 48.5);   color_white(a7, 69, 49);   color_black(as7, '6a', 49.5); color_white(b7, '6b', 50);
+            color_white(c8, '6c', 51)
+                
+            if (output)
+                output.send(ev.data);
+
+        }
+
+        function endhere() {
+
+            let data = new FormData()
+            data.append('notes', JSON.stringify(notes))
+
+            const endButton = document.getElementById('end')
+  
+            fetch("https://35.192.87.34:3002/upload", {
+            method: "POST",
+            body: data
+            }).then(res => {
+            if (res.status == 200){
+                endButton.style.borderColor = 'green'
+            }else if (res.status == 400){
+                endButton.style.borderColor = 'red'
+            }
+            });
+
+        }
+        
+        
+        var canvas = document.createElement("CANVAS");
+        var ctx = canvas.getContext("2d");
+        canvas.height = 1000;
+        canvas.width = 1800;
+        ctx.fillStyle = "#e9d3ff";
+
+        function makeRectangle(a) {
+            // x, y, width, height
+            let x = 0, id = setInterval(() => {
+                ctx.fillRect(a*34, x, 34, 30);
+                x += 1;
+
+                if (x >= canvas.width) {
+                    clearInterval(id);
+                }
+            }, 5);
+            document.body.appendChild(canvas);
+        }
+
+        function clearRectangle(a) {
+
+            let x = 0, id = setInterval(() => {
+                ctx.clearRect(a*34, 0, 34, 1000); 
+            }, 5);
+            document.body.appendChild(canvas);
+        }
+
+        function success(midiAccess) {
+            var i, iterator, data, port;
+            var a1 = document.getElementById('a1')
+            midi = midiAccess;
+            inputs = midi.inputs;
+            i = 0;
+            inputs.forEach(function (port) {
+                log.innerHTML += "Begin playing.";
+                log.innerHTML += "noteOnOff,note,velocity,time"+ "\n";
+            });
+            if (inputs.size > 0) {
+                iterator = inputs.values();
+                input = iterator.next().value;
+                input.onmidimessage = handleMIDIMessage;
+            }
+            outputs = midi.outputs;
+        }
+
+        function failure(error) {
+            alert("MIDI failed to start.");
+        }
+        const btn = document.getElementById('runtest');
+        btn.addEventListener('click', function onClick() {
+        btn.style.backgroundColor = '#e9d3ff';
+        btn.style.color = 'white';
+        });
+
+    </script>
+</body>
+
+</html>

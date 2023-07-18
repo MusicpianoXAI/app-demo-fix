@@ -1,0 +1,26 @@
+cat,catSyn,opt1,opt2,opt1Syn,opt2Syn
+Time ,(Beat / Tempo),Stable,Unstable,,
+Articulation,,Long,Short,,
+Articulation,,Cushioned,Solid,Soft,Hard
+Pedal,,Saturated,Sparse,Wet,Dry
+Pedal,,Clean,Blurred,,
+Pedal,,Subtle Change,Obvious Change,,
+Tone,,Even,Colorful,,
+Tone,,Rich,Shallow,,
+Tone,,Bright,Dark,,
+Intensity ,(Tone/ Contrast),Pure,Dramatic,,Expressive
+Intensity ,(Tone/ Contrast),Soft,Loud,,
+Intensity ,(Tone/ Contrast),Sophisticated,Raw,Mellow,Crude
+Intensity ,(Tone/ Contrast),Balanced,Unbalanced,,
+Intensity ,(Tone/ Contrast),Large Dynamic Range,Small Dynamic Range,,
+Music Making ,(Musicality),Fast Paced,Slow Paced,,
+Music Making ,(Musicality),Flowing,Choppy,,Articulated
+Music Making ,(Musicality),Swing,Steady,Flexible,Inflexible
+Music Making ,(Musicality),Flat,Spacious,,
+Music Making ,(Musicality),Harmonious,Disproportioned,,
+Emotion ,(Characteristic),Optimistic,Pessimistic,Pleasant,Sad
+Emotion ,(Characteristic),High Energy,Low Energy,,
+Emotion ,(Characteristic),Dominant,Subdued,Forceful,
+Mood,,Imaginative,Honest,,
+Mood,,Ethereal,Mundane,,
+Interpretation,,Convincing,Unsatisfactory,,Doubtful

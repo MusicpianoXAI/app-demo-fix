@@ -1,0 +1,56 @@
+/* StyleInfo */
+
+div.StyleInfo{
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.StyleInfo__text{
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+
+
+/* All sliders */
+
+span.MuiSlider-root{
+    padding:4px 0px;
+}
+
+/* My Slider */
+
+div.my-slider span.MuiSlider-thumb{
+    display: none;
+}
+
+div.my-slider span.MuiSlider-track{
+    background-color: #6F66CE;
+    border: 0;
+}
+
+/* Ideal Slider */
+
+div.ideal-slider span.MuiSlider-track{
+    background-color: #F4DA4E;
+    border: 0;
+}
+
+div.ideal-slider span.MuiSlider-rail{
+    background-color: rgb(189, 189, 189);
+    border: 0;
+}
+
+div.ideal-slider span.MuiSlider-thumb{
+    background-color: white;
+    height: 10px;
+    width: 10px;
+}
+
+

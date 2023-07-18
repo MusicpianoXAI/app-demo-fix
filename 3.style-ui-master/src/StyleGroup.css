@@ -1,0 +1,13 @@
+div.StyleGroup{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: left;
+    padding: 20px 10px;
+    width:10vw;
+}
+
+div.StyleGroup__title{
+    color: var(--yellow);
+}

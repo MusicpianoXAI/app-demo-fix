@@ -1,0 +1,27 @@
+div.Settings{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background:#282c34;
+    z-index: 0;
+  }
+
+  div.Settings__col{
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  div.SettingsGroup{
+      display: flex;
+      flex-direction: column;
+  }
+
+  label.MuiFormControlLabel-root.dimension{
+      padding-left: 30px;
+  }

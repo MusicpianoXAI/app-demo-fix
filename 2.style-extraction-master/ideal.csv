@@ -1,0 +1,26 @@
+,cat,catSyn,opt1,opt2,opt1Syn,opt2Syn,value
+0,Time ,(Beat / Tempo),Stable,Unstable,,,-0.12725556
+1,Articulation,,Long,Short,,,-0.4125561
+2,Articulation,,Cushioned,Solid,Soft,Hard,-0.32226202
+3,Pedal,,Saturated,Sparse,Wet,Dry,-0.47173882
+4,Pedal,,Clean,Blurred,,,0.14172761
+5,Pedal,,Subtle Change,Obvious Change,,,-0.044831917
+6,Tone,,Even,Colorful,,,0.06452729
+7,Tone,,Rich,Shallow,,,-0.43593022
+8,Tone,,Bright,Dark,,,0.08112152
+9,Intensity ,(Tone/ Contrast),Pure,Dramatic,,Expressive,0.20746635
+10,Intensity ,(Tone/ Contrast),Soft,Loud,,,-0.17675674
+11,Intensity ,(Tone/ Contrast),Sophisticated,Raw,Mellow,Crude,-0.47538966
+12,Intensity ,(Tone/ Contrast),Balanced,Unbalanced,,,-0.4201602
+13,Intensity ,(Tone/ Contrast),Large Dynamic Range,Small Dynamic Range,,,-0.11722111
+14,Music Making ,(Musicality),Fast Paced,Slow Paced,,,0.40499386
+15,Music Making ,(Musicality),Flowing,Choppy,,Articulated,-0.27839503
+16,Music Making ,(Musicality),Swing,Steady,Flexible,Inflexible,0.054788724
+17,Music Making ,(Musicality),Flat,Spacious,,,0.34245664
+18,Music Making ,(Musicality),Harmonious,Disproportioned,,,-0.36984652
+19,Emotion ,(Characteristic),Optimistic,Pessimistic,Pleasant,Sad,0.17536902
+20,Emotion ,(Characteristic),High Energy,Low Energy,,,0.01043034
+21,Emotion ,(Characteristic),Dominant,Subdued,Forceful,,-0.05082255
+22,Mood,,Imaginative,Honest,,,-0.3330638
+23,Mood,,Ethereal,Mundane,,,-0.2908595
+24,Interpretation,,Convincing,Unsatisfactory,,Doubtful,-0.2971261
