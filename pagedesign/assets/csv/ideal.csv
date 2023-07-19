@@ -1,0 +1,19 @@
+,cat,opt1,opt2,value
+0,TEMPO (Time),Stable,Unstable,2
+1,ARTICULATION,Short,Long,3
+2,ARTICULATION,Cushioned,Solid,4
+3,PEDAL,Sparsed,Saturated,6
+4,PEDAL,Clean,Blurred,3
+5,TONE,Even,Colorful,7
+6,TONE,Shallow,Rich,3
+7,TONE,Bright,Dark,1
+8,TONE,Soft,Loud,2
+9,INTENSITY,Sophisticated,Raw,4
+10,INTENSITY,Little Dynamic Range,Large Dynamic Range,7
+11,MUSIC MAKING,Fast Paced,Slow Paced,3
+12,MUSIC MAKING,Flat,Spacious,4
+13,MUSIC MAKING,Unbalanced,Balanced,7
+14,MUSIC MAKING,Pure,Dramatic,3
+15,EMOTION / MOOD,Optimistic,Pessimistic,6
+16,EMOTION / MOOD,Low Energy,High Energy,3
+17,EMOTION / MOOD,Honest,Imaginative,7

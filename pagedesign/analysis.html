@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script defer src="assets/js/barchart.js"></script>
+  <script defer src="assets/js/spider.js"></script>
+  <script defer src="assets/js/linechart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="mailogo">M-AI PIANO</div>
+        <img src="assets/images/SNUlogo1.png", class= "snulogo1", alt="SNU logo">
+        <img src="assets/images/SNUlogo2.png", class="snulogo2", alt="Graduate School of Data Science, Seoul National University">      
+    </header>
+    <main>
+        <div id="wrapper">   <!-- 1: My&Ideal, 2:My Result, 3:style labels, 4:graphs-->
+            <div class="items">
+                <div id="display">
+                    <div class="information">
+                        MY
+                        <button style="height: 40px; width: 40px;
+                        border-radius: 50%; background-color:#8A82E1">↥</button>
+                    </div>
+                    <audio controls>
+                        <source src="assets/audio/Beethoven_WoO80_thema_8bars_1_1.wav" type="audio/wav"> <!--example audio file-->
+                        Cannot find audio file.
+                    </audio>
+
+                </div>
+                <div id="display">
+                    <div class="information">
+                        Ideal
+                        <button style="height: 40px; width: 40px;
+                        border-radius: 50%; background-color: #F4DA4E">↺</button>
+                    </div>
+                    <audio controls>
+                        <source src="assets/audio/Beethoven_WoO80_thema_8bars_1_1.wav" type="audio/wav"> <!--example audio file-->
+                        Cannot find audio file.
+                    </audio>
+                </div>
+            </div>
+            <div id="grading">
+                <div class="user">
+                    <img src="assets/images/user.png", style="max-width: 75px;", alt="user picture">
+                    User NAME
+                </div>
+                <div class="grade">
+                    Total Score
+                    <text id="totalscore">89</text>
+                </div>
+                <div class="piece">
+                    <text id="piececomposer">L. Beethoven</text>
+                    <br>WoO 80, 32 Variations in C minor
+                </div>
+                <div class="gradedetail">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div id="stylelabels">
+                <div style="display: flex;flex-direction: column;justify-content: space-between;">
+                    <div id="stylecategory">TEMPO(Time)
+                        <div id="stylelabel">
+                            <div class="labels">
+                                <text>Stable Beat</text>
+                                <text>Unstable Beat</text>       
+                            </div>
+                            <div class="line", style="background: #F4DA4E;"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div id="stylecategory">ARTICULATION
+                        <div id="stylelabel">
+                            <div class="labels">
+                                <text>Short</text>
+                                <text>Long</text>       
+                            </div>
+                            <div class="line", style="background: #F4DA4E;"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div id="stylelabel">
+                            <div class="labels">
+                                <text>Cushioned</text>
+                                <text>Solid</text>       
+                            </div>
+                            <div class="line", style="background: #F4DA4E;"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div><div id="stylecategory">TONE
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Even</text>
+                            <text>Colorful</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Shallow</text>
+                            <text>Rich</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Bright</text>
+                            <text>Dark</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Soft</text>
+                            <text>Loud</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                </div></div>
+                <div><div id="stylecategory">MUSICALITY
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Fast Paced</text>
+                            <text>Slow Pace</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Flat</text>
+                            <text>Spacious</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Unbalanced</text>
+                            <text>Balanced</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Pure</text>
+                            <text>Dramatic</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                </div></div>
+                <div><div id="stylecategory">PEDAL
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Sparsed</text>
+                            <text>Saturated</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Clean</text>
+                            <text>Blurred</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                </div></div>
+                <div><div id="stylecategory">INTENSITY(Tone and Contrast)
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Sophisticated</text>
+                            <text>Raw</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Little Dynamic Range</text>
+                            <text>Large Dynamic Range</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                </div></div>
+                <div><div id="stylecategory">EMOTION / MOOD
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Optimistic</text>
+                            <text>Pessimistic</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Low Energy</text>
+                            <text>High Energy</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="stylelabel">
+                        <div class="labels">
+                            <text>Honest</text>
+                            <text>Imaginative</text>       
+                        </div>
+                        <div class="line", style="background: #F4DA4E;"></div>
+                        <div class="line"></div>
+                    </div>
+                </div></div>
+                <text style="font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;  
+                color: #FFFFFF;">STYLE LABELS</text>
+            </div>
+            <div id="graphs">
+                <div style="height: 300px;" id="spider"><canvas id="Spider"></canvas></div>
+                
+                <div style="height: 60px;" id="linechart01"><canvas id="linechart1", height="60px"></canvas></div>
+                <div style="height: 60px;", id="linechart02"><canvas id="linechart2", height="60px"></canvas></div>
+                <div style="height: 60px;", id="linechart03"><canvas id="linechart3", height="60px"></canvas></div>
+                
+            </div>
+        </div>
+    
+    
+    
+    </main>
+  </body>
+  </html>

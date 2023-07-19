@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+html {
+    background-color: #444444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: auto; /* header의 양쪽 여백(margin)을 동등하게 맞춤 -> 수평가운데정렬 */
+    /*width: 1080px;*/
+    height: 90px;
+    display: flex;
+    /*align-items: center;  /*하위 요소들 수직 가운데정렬 */
+    align-self: stretch;
+    position: relative;
+  }
+.mailogo {
+    position: absolute;
+    width: 193.68px;
+    height: 44px;
+    left: 44px;
+    top: 44px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 44px;
+    color: #F4DA4E;
+    /*border: 2px solid #8A82E1;*/
+  }
+.snulogo1{
+    position: absolute;
+    width: 64.56px;
+    height: 50px;
+    right: 250px;
+    top: 33px;
+    object-fit: contain;
+    mix-blend-mode: color-dodge;
+    }
+.snulogo2{ 
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    right: 40px;
+    top: 30px;
+    object-fit: contain;}
+
