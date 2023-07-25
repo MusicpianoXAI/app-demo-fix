@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>scoreanalysis</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <script defer src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+  <script defer src="assets/js/scoreanalysis.js"></script>
+  <script type="module" src="assets/js/waveform.js"></script>
+</head>
+<body>
+    <header>w
+        <div class="mailogo">M-AI PIANO</div>
+        <img src="assets/images/SNUlogo1.png", class= "snulogo1", alt="SNU logo">
+        <img src="assets/images/SNUlogo2.png", class="snulogo2", alt="Graduate School of Data Science, Seoul National University">      
+    </header>
+    <main>
+        <div id="scorewrap">
+            <button id="saveMEI">Save my MEI!</button>
+            <div id="notation", style="max-height: 500px;">
+            </div>
+            <div id="waveform">
+            </div>
+        </div>
+    </main>
+  </body>
+  </html>
